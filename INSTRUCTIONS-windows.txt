@@ -1,0 +1,13 @@
+ZOMBOID RADIO - live WFPK 91.9 Louisville, KY on in-game 91.8 MHz
+
+1. Close Project Zomboid.
+2. Double-click zomboid-radio.exe.
+   Windows may say "Windows protected your PC": click "More info" then "Run anyway".
+3. Wait for "Patched.", press Enter.
+4. In game, tune any radio (handheld, ham, car) to 91.8 MHz.
+
+If it can't find the game, it asks for the folder: in Steam right-click Project Zomboid >
+Manage > Browse local files, copy the address bar path, paste it in.
+
+After a game update the radio disappears; just run the patcher again.
+To remove: Steam > right-click Project Zomboid > Properties > Installed Files > Verify integrity.

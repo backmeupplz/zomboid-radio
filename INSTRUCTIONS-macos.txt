@@ -1,0 +1,15 @@
+ZOMBOID RADIO - live WFPK 91.9 Louisville, KY on in-game 91.8 MHz
+
+1. Close Project Zomboid.
+2. Double-click zomboid-radio-apple-silicon (M1/M2/M3/M4 Macs) or zomboid-radio-intel (older Macs).
+   macOS will block it the first time ("cannot be opened" / "Apple could not verify"):
+   open System Settings > Privacy & Security, scroll down, click "Open Anyway", then run it again.
+   (Or in Terminal: xattr -dr com.apple.quarantine ~/Downloads/zomboid-radio-macos  and run again.)
+3. Wait for "Patched.", press Enter.
+4. In game, tune any radio to 91.8 MHz.
+
+If it can't find the game, it asks for the folder: in Steam right-click Project Zomboid >
+Manage > Browse local files, then drag that folder into the Terminal window and press Enter.
+
+After a game update the radio disappears; just run the patcher again.
+To remove: Steam > right-click Project Zomboid > Properties > Installed Files > Verify integrity.
