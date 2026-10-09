@@ -86,14 +86,22 @@ public final class ZomboidRadioHook {
             d.radioLoopSound = emitter.playClip(clip(), null);
             if (d.radioLoopSound == 0L) {
                retryAt = System.currentTimeMillis() + 30000L;
-            } else {
-               emitter.setVolume(d.radioLoopSound, d.deviceVolume);
             }
          }
       }
 
+      // every frame, so the volume knob applies live (FileSound.tick re-reads it)
+      if (d.radioLoopSound != 0L) {
+         emitter.setVolume(d.radioLoopSound, volume(d.deviceVolume));
+      }
+
       emitter.tick();
       return true;
+   }
+
+   // Knob is 0 (mute) or 0.1..1.0. Lowest step -> 0.2, top -> 1.25 of the old fixed full volume; 0 stays silent.
+   public static float volume(float knob) {
+      return 1.25F * (float)Math.pow(knob, 0.8);
    }
 
    private static GameSoundClip clip() {
